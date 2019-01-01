@@ -30,8 +30,8 @@ layer5_bn_name = ['layer5.assp.0.1', 'layer5.assp.1.1', 'layer5.assp.2.1', 'laye
                   'layer5.image_pool.2', 'layer5.encode_fea.1', 'layer5.low_level_fea.1',
                   'layer5.decode_1.1', 'layer5.decode_2.1']
 train_mode = 'block_4_5'
-meta_restore_from = './snapshots/meta_deeplabv3+_2018-04-24-12:37_9000.pth'
-normal_restore_from = './snapshots/deeplabv3+decoder_bnwd_0.01_lr_0.001_2018-04-16-15:51_20000.pth'
+meta_restore_from = './snapshots/meta_davis16.pth'
+normal_restore_from = './snapshots/base_seg.pth'
 n_meta_init = 3
 name_suffix = ''
 
@@ -39,7 +39,7 @@ name_suffix = ''
 # dataset setting
 cfg = {}
 cfg['img_root'] = './dataset/davis/JPEGImages/480p'
-cfg['gt_root'] = './dataset/davis/Annotations_16/480p'
+cfg['gt_root'] = './dataset/davis/Annotations/480p'
 cfg['list_root'] = './dataset/davis/ImageSets/2016/val_w_imgs_no.txt'
 cfg['crop_size'] = (480, 854)
 cfg['img_mean'] = np.array((104.00698793,116.66876762,122.67891434), dtype=np.float32)
@@ -48,7 +48,7 @@ cfg['random_mirror'] = False
 cfg['ignore_label'] = 0
 cfg['num_steps'] = 200
 cfg['batch_size'] = 1
-cfg['max_label'] = 255.0
+cfg['max_label'] = 1.0
 
 
 # get sequences

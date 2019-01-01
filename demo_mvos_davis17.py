@@ -32,15 +32,15 @@ layer5_bn_name = ['layer5.assp.0.1', 'layer5.assp.1.1', 'layer5.assp.2.1', 'laye
                   'layer5.image_pool.2', 'layer5.encode_fea.1', 'layer5.low_level_fea.1',
                   'layer5.decode_1.1', 'layer5.decode_2.1']
 train_mode = 'block_4_5'
-meta_restore_from = './snapshots/meta_davis17_v2_2018-05-16-10:25_12000.pth'
-normal_restore_from = './snapshots/deeplabv3+decoder_bnwd_0.01_lr_0.001_2018-04-16-15:51_20000.pth'
+meta_restore_from = './snapshots/meta_davis17.pth'
+normal_restore_from = './snapshots/base_seg.pth'
 n_meta_init = 50
 name_suffix = ''
 
 
 # dataset setting
 cfg = {}
-cfg['img_root'] = './dataset/davis/JPEGImages/480p_split'
+cfg['img_root'] = './dataset/davis/JPEGImages/480p'
 cfg['gt_root'] = './dataset/davis/Annotations/480p_split'
 cfg['list_root'] = './dataset/davis/ImageSets/2017/val_w_imgs_no.txt'
 cfg['crop_size'] = (480, 854)
