@@ -1,5 +1,6 @@
-# MVOS-OL
-Online Meta Adaptation for Fast Video Object Segmentation
+# Online Meta Adaptation for Fast Video Object Segmentation
+
+![framework](framework.png)
 
 ### Introduction
 This is the implementation of our PAMI work `Online Meta Adaptation for Fast Video Object Segmentation`.
